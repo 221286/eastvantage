@@ -14,6 +14,7 @@ const Body = () => {
     },[][change]);
     
     const data=JSON.parse(localStorage.getItem('details'));
+    //Providing check for destructure and proper deployement
     if(!data){
       return
     }

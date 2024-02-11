@@ -20,6 +20,7 @@ const Body = () => {
     
   return (
     <div id='Container'>
+      <img alt="Profile pic" src={large} className='profile_image'/>
       <h3>Name: {title +" "+first+" "+last}</h3>
       <h3>Email: {email}</h3>
       <button onClick={()=>{toggle(change,setchange)}}>Refresh</button>

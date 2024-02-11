@@ -1,0 +1,1 @@
+export const DETAILS_URL ="https://randomuser.me/api";

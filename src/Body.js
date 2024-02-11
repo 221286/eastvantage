@@ -1,17 +1,23 @@
 import React, { useEffect, useState} from 'react'
 import fetchurls from './Functions/fetch'
-import { DETAILS_URL } from './Constants/constants'
+import { DETAILS_URL } from './Constants/constants';
+//Toggle function for refreshment to pull out new data
 import toggle from './Functions/Toggle';
 
 const Body = () => {
   const [change,setchange]=useState(true);
   
     useEffect (()=>{
+      //Used axis with async await instead of fetch
       fetchurls(DETAILS_URL)
       .then((response)=>{
+        //Stored to local storage in the JSON string form
         localStorage.setItem("details",JSON.stringify(response.results[0]))});
       
-    },[][change]);
+    },
+    //Passed two dependency array one to call useEffect when the component mounts.
+    //Second to fetch information each the the state variable changes
+    [][change]);
     
     const data=JSON.parse(localStorage.getItem('details'));
     //Providing check for destructure and proper deployement

@@ -14,6 +14,9 @@ const Body = () => {
     },[][change]);
     
     const data=JSON.parse(localStorage.getItem('details'));
+    if(!data){
+      return
+    }
     const {email,name:{title,first,last},picture:{large}}=data;
     
     

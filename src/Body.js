@@ -19,7 +19,7 @@ const Body = () => {
     
     
   return (
-    <div>
+    <div id='Container'>
       <h3>Name: {title +" "+first+" "+last}</h3>
       <h3>Email: {email}</h3>
       <button onClick={()=>{toggle(change,setchange)}}>Refresh</button>
